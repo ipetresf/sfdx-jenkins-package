@@ -16,6 +16,12 @@ node {
     // Check out code from source control.
     // -------------------------------------------------------------------------
 
+    echo ${SF_CONSUMER_KEY}
+    echo ${SF_USERNAME}
+    echo ${SERVER_KEY_CREDENTALS_ID}
+    echo ${PACKAGE_NAME}
+    echo ${SF_INSTANCE_URL}
+
     stage('checkout source') {
         checkout scm
     }
