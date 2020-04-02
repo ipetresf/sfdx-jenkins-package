@@ -44,6 +44,13 @@ node {
                 }
             }
 
+            stage('List scratch orgs') {
+                rc = command "${toolbelt}/sfdx force:org:list"
+                if (rc != 0) {
+                    error 'Salesforce sfdx force:org:list'
+                }
+            }
+
 
             // -------------------------------------------------------------------------
             // Create new scratch org to test your code.
