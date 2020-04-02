@@ -16,11 +16,11 @@ node {
     // Check out code from source control.
     // -------------------------------------------------------------------------
 
-    sh 'echo ${SF_CONSUMER_KEY}' 
-    sh 'echo ${SF_USERNAME}' 
-    sh 'echo ${PACKAGE_NAME}' 
-    sh 'echo ${SERVER_KEY_CREDENTALS_ID}' 
-    sh 'echo ${SF_INSTANCE_URL}' 
+    sh 'echo SF_CONSUMER_KEY ${SF_CONSUMER_KEY}' 
+    sh 'echo SF_USERNAME ${SF_USERNAME}' 
+    sh 'echo PACKAGE_NAME ${PACKAGE_NAME}' 
+    sh 'echo SERVER_KEY_CREDENTALS_ID ${SERVER_KEY_CREDENTALS_ID}' 
+    sh 'echo SF_INSTANCE_URL ${SF_INSTANCE_URL}' 
 
 
     stage('checkout source') {
