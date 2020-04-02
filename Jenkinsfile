@@ -8,7 +8,8 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                sh 'echo \'Test\''
+                sh 'echo ${SF_CONSUMER_KEY}'
+                sh 'echo ${SF_USERNAME}'
             }
         }
         stage('Deploy') { 
