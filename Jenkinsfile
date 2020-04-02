@@ -45,7 +45,7 @@ node {
             }
 
             stage('List scratch orgs') {
-                rc = command "${toolbelt}/sfdx force:org:list"
+                rc = command "${toolbelt}/sfdx force:org:list --all"
                 if (rc != 0) {
                     error 'Salesforce sfdx force:org:list'
                 }
