@@ -2,6 +2,27 @@
 
 import groovy.json.JsonSlurperClassic
 
+def releaseParameters = {
+	parameters([
+		booleanParam( defaultValue: false,
+					  description: 'Do you want to release to NA?',
+					  name: 'CREATE_PACKAGE'),
+		string( defaultValue: "iscrm@mc-rtim-devhub.com",
+				description: 'Enter Dev Hub username',
+				name: 'DEVHUB_USERNAME'
+		),
+        string( defaultValue: "",
+				description: 'Enter Dev Hub username',
+				name: 'DEVHUB_APP_CONSUMER_KEY`'
+		),
+		string( defaultValue: 'W-',
+				description: 'Gus work record associated with the release. Mandatory if you have enabled the pre-receive-hook require-work-record',
+				name: 'GUS_WORK_RECORD'
+		),
+	])
+}
+
+
 node {
 
     def SF_CONSUMER_KEY=env.SF_CONSUMER_KEY
