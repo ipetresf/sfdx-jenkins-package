@@ -11,10 +11,11 @@ node {
     def PACKAGE_NAME='0Ho1t000000wk3vCAA'
     def PACKAGE_VERSION
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
+    def WORKSPACE_LOCAL=env.WORKSPACE
 
     def toolbelt = tool 'toolbelt'
 
-
+    command "echo ${WORKSPACE_LOCAL}"
     // -------------------------------------------------------------------------
     // Check out code from source control.
     // -------------------------------------------------------------------------
